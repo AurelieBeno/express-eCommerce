@@ -9,7 +9,7 @@ const logger = require("morgan");
 const path = require("path");
 const cors = require("cors");
 const session = require("express-session");
-const MongoStrore = require("connect-mongo");
+const MongoStrore = require("connect-mongo")(session);
 const passport = require("passport");
 
 require("./config/passport-setup.js");
@@ -39,7 +39,7 @@ app.use(
     // receive cookies
     credentials: true,
     // only there domains/origins can access
-    originin: ["http://localhost:3000"]
+    origin: ["http://localhost:3000"]
   })
 );
 
