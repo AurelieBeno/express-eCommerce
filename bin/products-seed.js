@@ -8,7 +8,7 @@ const Product = require("../models/product-model.js");
 const allProduct = require("./products.json");
 
 mongoose
-  .connect("mongodb://localhost/3000", {
+  .connect("mongodb://localhost/express-ecommmerce", {
     useNewUrlParser: true
   })
   .then(x => {
