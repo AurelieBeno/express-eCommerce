@@ -8,10 +8,7 @@ const userSchema = new Schema(
     lastName: { type: String, required: true, minlength: 2 },
     firstName: { type: String, required: true, minlength: 2 },
     email: { type: String, required: true, unique: true, match: /^.+@.+\..+$/ },
-    phoneNumber: { type: Number, min: 10 }, // unique : true
-    cartId: { type: Number },
-    encryptedPassword: { type: String, required: true, minlength: 5 },
-    passwordConfirmation: { type: String }
+    encryptedPassword: { type: String, required: true }
   },
   {
     // Additional settings for the Scema class defined here
