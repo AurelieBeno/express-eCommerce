@@ -1,0 +1,124 @@
+[
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-tapered-crop-smart-pants-in-textured-wool-mix-camel/10424341-1-camel",
+    "brandName": "ASOS DESIGN",
+    "colour": "Camel",
+    "size": ["S", "M", "L"],
+    "productId": 10424341,
+    "name": "ASOS DESIGN tapered crop smart pants in textured wool mix camel",
+    "price": 48,
+    "productType": "Pant",
+    "url": "asos-design/asos-design-tapered-crop-smart-pants-in-textured-wool-mix-camel/prd/10424341?clr=camel"
+  },
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-longline-trench-coat-in-camel/10717153-1-camel",
+    "brandName": "ASOS DESIGN",
+    "colour": "Camel",
+    "size": ["S", "M", "L"],
+    "productId": 10717153,
+    "name": "ASOS DESIGN longline trench coat in camel",
+    "price": 95,
+    "productType": "Coat",
+    "url": "asos-design/asos-design-longline-trench-coat-in-camel/prd/10717153?clr=camel"
+  },
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-cord-western-jacket-in-mustard/9131411-1-mustard",
+    "brandName": "ASOS DESIGN",
+    "colour": "Mustard",
+    "size": ["S", "M", "L"],
+    "id": 9131411,
+    "name": "ASOS DESIGN cord western jacket in mustard",
+    "price": 56,
+    "productType": "Jacket",
+    "url": "asos-design/asos-design-cord-western-jacket-in-mustard/prd/9131411?clr=mustard"
+  },
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-faux-suede-bomber-jacket-in-tan/11215689-1-tan",
+    "brandName": "ASOS DESIGN",
+    "colour": "Tan",
+    "size": ["S", "M", "L"],
+    "groupId": null,
+    "productId": 11215689,
+    "name": "ASOS DESIGN faux suede bomber jacket in tan",
+    "price": 79,
+    "productType": "Bombers",
+    "url": "asos-design/asos-design-faux-suede-bomber-jacket-in-tan/prd/11215689?clr=tan"
+  },
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-harrington-jersey-jacket-in-blue/11154369-1-bluefog",
+    "brandName": "ASOS DESIGN",
+    "colour": "Blue fog",
+    "size": ["S", "M", "L"],
+    "productId": 11154369,
+    "name": "ASOS DESIGN harrington jersey jacket in blue",
+    "price": 32,
+    "productType": "Jacket",
+    "url": "asos-design/asos-design-harrington-jersey-jacket-in-blue/prd/11154369?clr=blue-fog"
+  },
+
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-skinny-sweatpants-in-black-with-orange-side-stripe/11371657-1-black",
+    "brandName": "ASOS DESIGN",
+    "colour": "Black",
+    "size": ["S", "M", "L"],
+    "productId": 11371657,
+    "name": "ASOS DESIGN skinny sweatpants in black with orange side stripe",
+    "price": 35,
+    "productType": "Sweatpant",
+    "url": "asos-design/asos-design-skinny-sweatpants-in-black-with-orange-side-stripe/prd/11371657?clr=black"
+  },
+
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-oversized-color-block-sweater-with-animal-design/11280533-1-multi",
+    "brandName": "ASOS DESIGN",
+    "colour": "Multi",
+    "size": ["S", "M", "L"],
+    "productId": 11280533,
+    "name": "ASOS DESIGN oversized color block sweater with animal design",
+    "price": 48,
+    "productType": "Sweater",
+    "url": "asos-design/asos-design-oversized-color-block-sweater-with-animal-design/prd/11280533?clr=multi"
+  },
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-track-jersey-jacket-in-beige/11154376-1-birch",
+    "brandName": "ASOS DESIGN",
+    "colour": "Birch",
+    "size": ["S", "M", "L"],
+    "productId": 11154376,
+    "name": "ASOS DESIGN track jersey jacket in beige",
+    "price": 32,
+    "productType": "Jacket",
+    "url": "asos-design/asos-design-track-jersey-jacket-in-beige/prd/11154376?clr=birch"
+  },
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-high-top-sneakers-in-white-mesh-with-chunky-sole/10809773-1-white",
+    "colour": "White",
+    "size": ["S", "M", "L"],
+    "productId": 10809773,
+    "name": "ASOS DESIGN high top sneakers in white mesh with chunky sole",
+    "price": 72,
+    "productType": "Sneakers",
+    "url": "asos-design/asos-design-high-top-sneakers-in-white-mesh-with-chunky-sole/prd/10809773?clr=white"
+  },
+  {
+    "gender": "Male",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-t-shirt-with-contrast-shoulder-taping-in-navy/11432130-1-navy",
+    "brandName": "ASOS DESIGN",
+    "colour": "Navy",
+    "size": ["S", "M", "L"],
+    "productId": 11432130,
+    "name": "ASOS DESIGN t-shirt with contrast shoulder taping in navy",
+    "price": 19,
+    "productType": "t-shirt",
+    "url": "asos-design/asos-design-t-shirt-with-contrast-shoulder-taping-in-navy/prd/11432130?clr=navy"
+  }
+]
