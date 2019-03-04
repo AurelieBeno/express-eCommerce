@@ -16,7 +16,11 @@ router.get("/product", (req, res, next) => {
 router.get("/product/:productId", (req, res, next) => {
   const { productId } = req.params;
   Product.findById(productId)
-    .then(productDoc => res.json(productDoc))
+    .then(
+      productDoc => res.json(productDoc)
+      //console.log("ONE PRODUCT", productDoc)
+    )
+
     .catch(err => next(err));
 });
 
