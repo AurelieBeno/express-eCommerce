@@ -41,7 +41,6 @@
     "brandName": "ASOS DESIGN",
     "colour": "Tan",
     "size": ["S", "M", "L"],
-    "groupId": null,
     "productId": 11215689,
     "name": "ASOS DESIGN faux suede bomber jacket in tan",
     "price": 79,
@@ -120,5 +119,89 @@
     "price": 19,
     "productType": "t-shirt",
     "url": "asos-design/asos-design-t-shirt-with-contrast-shoulder-taping-in-navy/prd/11432130?clr=navy"
+  },
+  {
+    "gender": "Female",
+    "baseImageUrl": "https://images.asos-media.com/products/yas-v-neck-midi-dress-with-elasticated-waist/11428693-1-red?$n_480w$&wid=476&fit=constrain",
+    "brandName": "ASOS DESIGN",
+    "colour": "Red",
+    "size": ["S", "M", "L"],
+    "productId": 1409282,
+    "name": "Y.A.S v neck midi dress with elasticated waist",
+    "price": 60,
+    "productType": "dress",
+    "url": "yas/yas-v-neck-midi-dress-with-elasticated-waist/prd/11428693?clr=red&SearchQuery=&cid=8799&gridcolumn=3&gridrow=10&gridsize=4&pge=1&pgesize=72&totalstyles=5351"
+  },
+  {
+    "gender": "Female",
+    "baseImageUrl": "https://images.asos-media.com/products/french-connection-stripe-dress-with-block-panels/11458911-1-creamblue?$n_480w$&wid=476&fit=constrain",
+    "brandName": "ASOS DESIGN",
+    "colour": "Cream/blue",
+    "size": ["S", "M", "L"],
+    "productId": 1411682,
+    "name": "French Connection stripe dress with block panels",
+    "price": 45.5,
+    "productType": "dress",
+    "url": "french-connection-stripe-dress-with-block-panels"
+  },
+  {
+    "gender": "Female",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-tux-midi-dress/11244684-1-softcamel?$n_480w$&wid=476&fit=constrain",
+    "brandName": "ASOS DESIGN",
+    "colour": "Camel",
+    "size": ["S", "M", "L"],
+    "productId": 1398013,
+    "name": "ASOS DESIGN tux midi dress",
+    "price": 38,
+    "productType": "dress",
+    "url": "asos-design-tux-midi-dress/11244684-1-softcamel?$n_480w$&wid=476&fit=constrain"
+  },
+  {
+    "gender": "Female",
+    "baseImageUrl": "https://images.asos-media.com/products/nike-black-t-shirt-dress/10573336-1-blackwhite?$n_480w$&wid=476&fit=constrain",
+    "brandName": "ASOS DESIGN",
+    "colour": "Black",
+    "size": ["S", "M", "L"],
+    "productId": 1343483,
+    "name": "Nike Black T-Shirt Dress",
+    "price": 25,
+    "productType": "dress",
+    "url": "/nike-black-t-shirt-dress/10573336-1-blackwhite?$n_480w$&wid=476&fit=constrain"
+  },
+  {
+    "gender": "Female",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-tall-high-neck-low-back-mini-sundress-in-daisy-print/11209115-1-daisyprint?$n_480w$&wid=476&fit=constrain",
+    "brandName": "ASOS DESIGN",
+    "colour": " Daisy print",
+    "size": ["S", "M", "L"],
+    "productId": 1395214,
+    "name": "ASOS DESIGN Tall High neck low back mini sundress in daisy print",
+    "price": 25,
+    "productType": "dress",
+    "url": "asos-design-tall-high-neck-low-back-mini-sundress-in-daisy-print/11209115-1-daisyprint?$n_480w$&wid=476&fit=constrain"
+  },
+  {
+    "gender": "Female",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-v-front-v-back-smock-dress-midi-in-rust-spot/11208134-1-spot?$n_480w$&wid=476&fit=constrain",
+    "brandName": "ASOS DESIGN",
+    "colour": "Spot",
+    "size": ["S", "M", "L"],
+    "productId": 1395133,
+    "name": "ASOS DESIGN v front v back smock dress midi in rust spot",
+    "price": 35,
+    "productType": "dress",
+    "url": "asos-design-v-front-v-back-smock-dress-midi-in-rust-spot/prd/11208134?clr=spot&SearchQuery=&cid=8799&gridcolumn=1&gridrow=18&gridsize=4&pge=1&pgesize=72&totalstyles=2356"
+  },
+  {
+    "gender": "Female",
+    "baseImageUrl": "https://images.asos-media.com/products/asos-design-curve-button-through-smock-maxi-dress/11209765-1-khaki?$n_480w$&wid=476&fit=constrain",
+    "brandName": "ASOS DESIGN",
+    "colour": "Khaki",
+    "size": ["S", "M", "L"],
+    "productId": 1395244,
+    "name": "ASOS DESIGN Curve button through smock maxi dress",
+    "price": 30,
+    "productType": "dress",
+    "url": "asos-curve/asos-design-curve-button-through-smock-maxi-dress/prd/11209765?clr=khaki&SearchQuery=&cid=8799&gridcolumn=3&gridrow=18&gridsize=4&pge=1&pgesize=72&totalstyles=2356"
   }
 ]
