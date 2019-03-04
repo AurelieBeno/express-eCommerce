@@ -66,4 +66,8 @@ const auth = require("./routes/auth-router.js");
 // (example: "/logout -> "/api/logout")
 app.use("/api", auth);
 
+const product = require("./routes/product-router.js");
+
+app.use("/api", product);
+
 module.exports = app;
