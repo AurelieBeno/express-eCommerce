@@ -7,7 +7,6 @@ const router = express.Router();
 router.get("/product", (req, res, next) => {
   Product.find()
     .sort({ createdAt: -1 })
-    .limit(20)
     // Send the DB query results array as a JSON response to the client
     .then(productResult => res.json(productResult))
     .catch(err => next(err));
