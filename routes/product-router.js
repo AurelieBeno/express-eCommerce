@@ -53,4 +53,15 @@ router.post("/product", (req, res, next) => {
     .then(productDoc => res.json(productDoc))
     .catch(err => next(err));
 });
+
+// Filter by Gender
+// router.get("/product", (req, res, next) => {
+//   Product.find()
+//     .populate("gender")
+
+//     // Send the DB query results array as a JSON response to the client
+//     .then(genderResult => res.json(genderResult))
+//     .catch(err => next(err));
+// });
+
 module.exports = router;
