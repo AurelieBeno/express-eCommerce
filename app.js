@@ -70,4 +70,8 @@ const product = require("./routes/product-router.js");
 
 app.use("/api", product);
 
+const order = require("./routes/order-router.js");
+
+app.use("/api", order);
+
 module.exports = app;

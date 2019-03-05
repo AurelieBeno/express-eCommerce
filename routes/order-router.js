@@ -21,72 +21,72 @@ const router = express.Router();
 // });
 
 // user need to sign up before continue to add product to order
-router.get("/order/:orderId/product/:productId", (req, res, next) => {
-  // req.user comes from Passport's deserializeUser()
-  // (it's the document from the database of the logged-in user)
-  const { orderId, productId } = req.params;
+// router.get("/order/:orderId/product/:productId", (req, res, next) => {
+//   // req.user comes from Passport's deserializeUser()
+//   // (it's the document from the database of the logged-in user)
+//   const { orderId, productId } = req.params;
 
-  if (req.user) {
-    // AUTHORIZATION: only show the order if you are logged-in
-    Product.find({ "cities.startingCity": productId })
-      .then(lines => {
-        console.log(lines, "wahahahha");
+//   if (req.user) {
+//     // AUTHORIZATION: only add the product to order if you are logged-in
+//     Product.find({ "products.productItem": orderId })
+//       .then(lines => {
+//         console.log(lines, "wahahahha");
 
-        res.locals.lineArray = lines;
-        res.render("resa-views/resa-option.hbs");
-      })
-      .catch(err => next(err));
-  } else {
-    req.session.reservationId = orderId;
-    req.session.city = productId;
-    // redirect to the sign up page if you ARE NOT logged-in
-    req.flash("error", "Signup to create your itinerary");
-    res.redirect("/signup");
-  }
-});
+//         res.locals.lineArray = lines;
+//         res.render("resa-views/resa-option.hbs");
+//       })
+//       .catch(err => next(err));
+//   } else {
+//     req.session.orderId = productItem;
 
-// Summary of user order
-router.get("/summary", (req, res, next) => {
-  res.render("resa-views/resa-summary.hbs");
-});
+//     // redirect to the sign up page if you ARE NOT logged-in
+//     req.flash("error", "Signup to create your itinerary");
+//     res.redirect("/signup");
+//   }
+// });
 
-router.post("/process-summary", (req, res, next) => {
-  const { itineraries } = req.body;
-  Busline.find({ "cities._id": { $in: itineraries } })
-    .then(lines => {
-      // res.json(lines);
-
-      lines.forEach(oneLine => {
-        oneLine.cities = oneLine.cities.filter(oneCity => {
-          // convert ID to string because its not really string
-          return itineraries.includes(oneCity._id.toString());
+router.post("/add-product/:productId", (req, res, next) => {
+  const { productId } = req.params;
+  Product.findById(productId)
+    .then(product => {
+      let promise;
+      if (req.session.userOrder) {
+        // update the existing order
+        promise = Order.findByIdAndUpdate(
+          req.session.userOrder,
+          {
+            $push: { cart: productId },
+            $inc: { totalPrice: product.price }
+          },
+          { runValidators: true, new: true }
+        );
+      } else {
+        // create the order
+        promise = Order.create({
+          cart: [productId],
+          totalPrice: product.price
         });
-      });
-
-      // Creating calculation Total Price of the trip
-      var tripLength = lines[0].cities.length;
-      var tripCost = tripLength * 99;
-
-      res.locals.cost = tripCost;
-      res.locals.lineArray = lines;
-      res.render("resa-views/resa-summary.hbs");
-      // res.json(lines);
+      }
+      promise
+        .then(order => {
+          // saving the session
+          req.session.userOrder = order._id;
+          res.json(order);
+        })
+        .catch(err => next(err));
     })
     .catch(err => next(err));
 });
 
-router.get("/resa-views/registration-form.hbs", (req, res, next) => {
-  res.render("resa-views/registration-form.hbs");
-});
+// Product.find({ "products._id": { $in: purchase } })
+//   .then(order => {
+//     res.json(order);
 
-// submit registration and payment form (last form)
-
-router.get("/registration", (req, res, next) => {
-  res.render("resa-views/registration-form.hbs");
-});
-router.post("/process-registration", (req, res, next) => {
-  // const { }
-  res.render("resa-views/final-page.hbs");
-});
+//     order.forEach(oneOrder => {
+//       oneOrder.products = oneOrder.products.filter(oneProduct => {
+//         // convert ID to string because its not really string
+//         return purchase.includes(oneProduct._id.toString());
+//       });
+//     });
 
 module.exports = router;
