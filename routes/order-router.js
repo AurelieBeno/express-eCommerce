@@ -10,41 +10,6 @@ const router = express.Router();
 // Set up for email confirmation to user
 // const { sendConfirmationMail } = require("../config/nodemailer-setup.js");
 
-// result of user input -- Departure city
-// router.get("/order/:orderId", (req, res, next) => {
-//   City.find()
-//     .then(resaDoc => {
-//       res.locals.cityItem = resaDoc;
-//       res.render("resa-views/resa-result.hbs");
-//     })
-//     .catch(err => next(err));
-// });
-
-// user need to sign up before continue to add product to order
-// router.get("/order/:orderId/product/:productId", (req, res, next) => {
-//   // req.user comes from Passport's deserializeUser()
-//   // (it's the document from the database of the logged-in user)
-//   const { orderId, productId } = req.params;
-
-//   if (req.user) {
-//     // AUTHORIZATION: only add the product to order if you are logged-in
-//     Product.find({ "products.productItem": orderId })
-//       .then(lines => {
-//         console.log(lines, "wahahahha");
-
-//         res.locals.lineArray = lines;
-//         res.render("resa-views/resa-option.hbs");
-//       })
-//       .catch(err => next(err));
-//   } else {
-//     req.session.orderId = productItem;
-
-//     // redirect to the sign up page if you ARE NOT logged-in
-//     req.flash("error", "Signup to create your itinerary");
-//     res.redirect("/signup");
-//   }
-// });
-
 router.post("/add-product/:productId", (req, res, next) => {
   const { productId } = req.params;
   Product.findById(productId)
@@ -78,15 +43,14 @@ router.post("/add-product/:productId", (req, res, next) => {
     .catch(err => next(err));
 });
 
-// Product.find({ "products._id": { $in: purchase } })
-//   .then(order => {
-//     res.json(order);
-
-//     order.forEach(oneOrder => {
-//       oneOrder.products = oneOrder.products.filter(oneProduct => {
-//         // convert ID to string because its not really string
-//         return purchase.includes(oneProduct._id.toString());
-//       });
-//     });
+router.get("/check-out", (req, res, next) => {
+  const { userOrder } = req.session;
+  console.log("find total price", userOrder);
+  Order.findById(userOrder)
+    .populate("cart")
+    // send the DB query result document as a JSON response to the client
+    .then(orderDoc => res.json(orderDoc))
+    .catch(err => next(err));
+});
 
 module.exports = router;
