@@ -48,6 +48,38 @@ router.post("/product", (req, res, next) => {
     productType,
     url
   })
+    // send the DB query result document as a JSON response to the client
+    .then(productDoc => res.json(productDoc))
+    .catch(err => next(err));
+});
+
+//************************************************************************************* */
+
+router.post("/women/product", (req, res, next) => {
+  const {
+    gender,
+    baseImageUrl,
+    brandName,
+    colour,
+    size,
+    productId,
+    name,
+    price,
+    productType,
+    url
+  } = req.body;
+  Product.create({
+    gender,
+    baseImageUrl,
+    brandName,
+    colour,
+    size,
+    productId,
+    name,
+    price,
+    productType,
+    url
+  })
 
     // send the DB query result document as a JSON response to the client
     .then(productDoc => res.json(productDoc))
