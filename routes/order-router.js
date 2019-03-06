@@ -53,4 +53,18 @@ router.get("/check-out", (req, res, next) => {
     .catch(err => next(err));
 });
 
+// Remove a product
+router.delete("/check-out/:cartId/delete", (req, res, next) => {
+  const { cartId } = req.params;
+  console.log(Order.findById);
+  Order.findByIdAndRemove(cartId)
+    .then(cartDoc => {
+      console.log("product REMOVED! ", cartId);
+      res.json(cartDoc);
+    })
+    .catch(err => {
+      console.log("fail, nothing deleted--", err);
+    });
+});
+
 module.exports = router;
