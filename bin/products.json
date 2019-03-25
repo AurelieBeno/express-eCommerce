@@ -330,9 +330,9 @@
     "brandName": "New Look",
     "colour": "Black pattern",
     "size": ["S", "M", "L"],
-    "pre": "New Look swing dress with buttons in floral print",
-    "pricoductId": 1402715,
-    "name": 17.99,
+    "price": 17.99,
+    "productId": 1402715,
+    "name": "New Look swing dress with buttons in floral print",
     "productType": "dress",
     "url": "/new-look/new-look-swing-dress-with-buttons-in-floral-print/prd/11299711?clr=black-pattern&SearchQuery=&cid=8799&gridcolumn=2&gridrow=2&gridsize=4&pge=3&pgesize=72&totalstyles=2379"
   },
