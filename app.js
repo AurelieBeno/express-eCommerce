@@ -9,7 +9,7 @@ const logger = require("morgan");
 const path = require("path");
 const cors = require("cors");
 const session = require("express-session");
-const MongoStrore = require("connect-mongo")(session);
+const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
 
 require("./config/passport-setup.js");
@@ -51,7 +51,7 @@ app.use(
 
     // session secret
     secret: process.env.SESSION_SECRET,
-    store: new MongoStrore({ mongooseConnection: mongoose.connection })
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
 
@@ -73,5 +73,8 @@ app.use("/api", product);
 const order = require("./routes/order-router.js");
 
 app.use("/api", order);
+
+const payment = require("./routes/payment.js");
+app.use("/api", payment);
 
 module.exports = app;
