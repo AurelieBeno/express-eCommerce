@@ -1,28 +1,30 @@
 const express = require("express");
 const stripe = require("stripe")(
-  process.env.STRIPE_SECRET_KEY
+  "sk_test_N9FTEwEZ4zUDCi2L343vyn6800zBdJSefA"
 );
 const router = express.Router();
 
 router.post("/checkout", async (req, res) => {
-  console.log("Request :", req.body);
-
+  // console.log("Request :", req.body);
+  // console.log("amount", req.body.totalPrice);
   let error;
   let status;
   try {
-    const token = req.body;
+    const token = req.body.source;
+    console.log("TOKEN  BACKEND", token);
 
     const customer = await stripe.customers.create({
       email: token.email,
       source: token.id
     });
+    console.log(" CUSTOMER", customer);
 
     const charge = await stripe.charges.create({
-      amount: totalPrice * 100,
+      amount: req.body.totalPrice * 100,
       currency: "usd",
       customer: customer.id,
       receipt_email: token.email,
-      description: `Purchased the ${cart}`,
+      // description: `Purchased the ${cart}`,
       shipping: {
         name: token.card.name,
         address: {
@@ -34,6 +36,7 @@ router.post("/checkout", async (req, res) => {
         }
       }
     });
+
     console.log("Charge:", { charge });
     status = "success";
   } catch (error) {
